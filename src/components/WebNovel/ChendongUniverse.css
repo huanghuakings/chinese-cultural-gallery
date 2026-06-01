@@ -1,0 +1,131 @@
+/* 辰东宇宙 — Xuezhong-level polish, preserves unique work-card layout */
+.chendong-universe {
+  background: linear-gradient(180deg, #0a0a0c 0%, #120f1a 100%);
+  min-height: 100vh; color: #f5efe0;
+}
+
+/* 星空背景 */
+#bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; overflow: hidden; }
+#bg .star { position: absolute; border-radius: 50%; background: rgba(201,168,76,0.4); animation: chd-twinkle 3s infinite alternate; }
+@keyframes chd-twinkle { 0% { opacity: 0.15; } 100% { opacity: 0.7; } }
+
+/* Hero */
+.chd-hero {
+  position: relative; min-height: 55vh; z-index: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(180deg, rgba(10,10,12,0.3) 0%, rgba(18,15,26,0.9) 100%),
+              radial-gradient(ellipse at center, rgba(201,168,76,0.08) 0%, transparent 70%);
+}
+.chd-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 70% 60%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 40% 80%, rgba(255,255,255,0.3), transparent);
+}
+.chd-hero h1 {
+  font-family: 'ZCOOL XiaoWei', serif; font-size: clamp(2rem, 5vw, 3.5rem);
+  color: #f5efe0; letter-spacing: 8px; margin-bottom: 12px;
+}
+.chd-hero .chd-subtitle { color: #8a8278; letter-spacing: 6px; font-size: 1.05rem; margin-bottom: 24px; }
+.chd-hero .chd-verse { color: #d4a853; font-style: italic; line-height: 2; font-size: 0.9rem; max-width: 500px; }
+
+/* Content */
+.chd-content { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; position: relative; z-index: 1; }
+.chd-sec-title {
+  font-family: 'ZCOOL XiaoWei', serif; font-size: 1.8rem; color: #f5efe0;
+  text-align: center; letter-spacing: 6px; margin-bottom: 8px;
+}
+.chd-sec-sub { color: #8a8278; text-align: center; font-size: 0.9rem; letter-spacing: 4px; margin-bottom: 3rem; }
+
+/* Work cards */
+.chd-works-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 1.5rem; }
+.chd-work-card {
+  background: linear-gradient(135deg, rgba(20,18,28,0.95), rgba(10,10,12,0.98));
+  border: 1px solid rgba(255,255,255,0.06); border-radius: 8px;
+  padding: 1.5rem; position: relative; overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  animation: cpFadeIn 0.6s ease-out both;
+}
+.chd-work-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(201,168,76,0.15);
+  border-color: rgba(201,168,76,0.2);
+}
+.chd-top-bar { position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+.chd-book-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.chd-book-title { font-family: 'ZCOOL XiaoWei', serif; font-size: 1.25rem; color: #f5efe0; }
+.chd-book-year { font-size: 0.75rem; color: #6a6268; border: 1px solid rgba(255,255,255,0.08); padding: 3px 10px; border-radius: 3px; }
+
+.chd-char-block { margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); }
+.chd-char-block h4 { font-size: 0.75rem; color: #8a8278; letter-spacing: 3px; margin-bottom: 12px; }
+.chd-char-block h4::before { content: '◆ '; color: #c9a84c; }
+
+.chd-protag { display: flex; gap: 14px; align-items: flex-start; }
+.chd-av {
+  width: 50px; height: 50px; border-radius: 50%;
+  background: rgba(20,18,28,0.9); border: 2px solid #c9a84c;
+  display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;
+}
+.chd-info h5 { font-size: 1.1rem; color: #f5efe0; margin-bottom: 3px; }
+.chd-info .chd-t { font-size: 0.8rem; color: #d4a853; margin-bottom: 6px; }
+.chd-info p { font-size: 0.85rem; color: #8a8278; line-height: 1.7; }
+
+.chd-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.chd-tag {
+  padding: 3px 10px; background: rgba(212,168,83,0.06);
+  border: 1px solid rgba(212,168,83,0.12); border-radius: 3px;
+  font-size: 0.75rem; color: #a09888;
+}
+.chd-tag::before { content: '● '; color: #c9a84c; font-size: 0.5rem; vertical-align: middle; }
+
+.chd-quote-box {
+  margin-top: 16px; padding: 10px 14px;
+  background: rgba(212,168,83,0.06); border-left: 3px solid #c9a84c;
+  border-radius: 0 6px 6px 0;
+}
+.chd-quote-box p {
+  font-family: 'ZCOOL XiaoWei', serif; font-size: 0.85rem; color: #c9a96e;
+  line-height: 1.7; padding-left: 8px;
+}
+
+/* Work color accents */
+[data-w="不死不灭"] .chd-top-bar { background: #c9a84c; }
+[data-w="神墓"] .chd-top-bar { background: #8b1a1a; }
+[data-w="长生界"] .chd-top-bar { background: #5a8f7c; }
+[data-w="遮天"] .chd-top-bar { background: #6b8db5; }
+[data-w="完美世界"] .chd-top-bar { background: #d43c2a; }
+[data-w="圣墟"] .chd-top-bar { background: #c47a7a; }
+[data-w="深空彼岸"] .chd-top-bar { background: #8a6d8a; }
+[data-w="夜无疆"] .chd-top-bar { background: #4a6741; }
+
+/* Timeline */
+.chd-timeline { position: relative; padding-left: 40px; }
+.chd-timeline::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 1px;
+  background: linear-gradient(to bottom, #c9a84c, #8b1a1a, transparent);
+}
+.chd-tl-item {
+  position: relative; padding-bottom: 30px;
+  animation: cpFadeIn 0.5s ease-out both;
+}
+.chd-tl-item::before {
+  content: ''; position: absolute; left: -44px; top: 5px;
+  width: 8px; height: 8px; background: #c9a84c; border-radius: 50%;
+  box-shadow: 0 0 8px rgba(201,168,76,0.4);
+}
+.chd-tl-year { font-size: 0.85rem; color: #c9a84c; margin-bottom: 4px; }
+.chd-tl-content h3 { font-family: 'ZCOOL XiaoWei', serif; font-size: 1.1rem; color: #f5efe0; margin-bottom: 4px; }
+.chd-tl-content p { color: #8a8278; font-size: 0.85rem; line-height: 1.7; }
+
+/* Footer */
+.chd-footer { text-align: center; padding: 3rem 2rem; color: #6a6268; font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.04); }
+.chd-footer .chd-footer-b {
+  display: inline-block; font-family: 'Ma Shan Zheng', cursive;
+  font-size: 1.5rem; color: #c9a84c; margin-bottom: 12px; letter-spacing: 4px;
+}
+
+@media (max-width: 768px) {
+  .chd-works-grid { grid-template-columns: 1fr; }
+}

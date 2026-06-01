@@ -1,0 +1,58 @@
+[
+  {
+    "id": "xiyouji",
+    "title": "西游记",
+    "emoji": "🐵",
+    "color": "#8b5cf6",
+    "bgColor": "rgba(139,92,246,0.08)",
+    "borderColor": "rgba(139,92,246,0.2)",
+    "author": "吴承恩",
+    "dynasty": "明",
+    "desc": "九九八十一难，取经路上妖仙圣凡",
+    "route": "/classics/xiyouji",
+    "highlights": ["孙悟空", "唐僧", "猪八戒", "沙僧", "观音菩萨"],
+    "stats": { "characters": 23, "immortals": 4, "demons": 14, "mortals": 5 }
+  },
+  {
+    "id": "honglou",
+    "title": "红楼梦",
+    "emoji": "🌸",
+    "color": "#b8454a",
+    "bgColor": "rgba(184,69,74,0.06)",
+    "borderColor": "rgba(184,69,74,0.15)",
+    "author": "曹雪芹",
+    "dynasty": "清",
+    "desc": "千红一窟万艳同杯，金陵十二钗群芳",
+    "route": "/classics/honglou",
+    "highlights": ["林黛玉", "薛宝钗", "贾宝玉", "王熙凤", "史湘云"],
+    "stats": { "characters": 36, "main": 12, "secondary": 11, "minor": 13 }
+  },
+  {
+    "id": "shuihu",
+    "title": "水浒传",
+    "emoji": "⚔️",
+    "color": "#1e6091",
+    "bgColor": "rgba(30,96,145,0.08)",
+    "borderColor": "rgba(30,96,145,0.2)",
+    "author": "施耐庵",
+    "dynasty": "明",
+    "desc": "一百单八将，替天行道聚义梁山",
+    "route": "/classics/shuihu",
+    "highlights": ["宋江", "林冲", "武松", "鲁智深", "李逵"],
+    "stats": { "characters": 36, "heavenly": 36, "earthly": 72, "villains": 12 }
+  },
+  {
+    "id": "sanguo",
+    "title": "三国演义",
+    "emoji": "🏯",
+    "color": "#b8860b",
+    "bgColor": "rgba(184,134,11,0.06)",
+    "borderColor": "rgba(184,134,11,0.15)",
+    "author": "罗贯中",
+    "dynasty": "明",
+    "desc": "滚滚长江东逝水，三国鼎立志士争锋",
+    "route": "/classics/sanguo",
+    "highlights": ["诸葛亮", "关羽", "曹操", "刘备", "周瑜"],
+    "stats": { "characters": 36, "wei": 12, "shu": 12, "wu": 12 }
+  }
+]

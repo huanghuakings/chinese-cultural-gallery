@@ -1,0 +1,18 @@
+/* 更多网文 */
+.mn-page { background: linear-gradient(180deg, #0a0a0c 0%, #120f1a 100%); min-height: 100vh; }
+.mn-hero { position: relative; min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 80px 20px; overflow: hidden; }
+.mn-bg-stars { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: radial-gradient(ellipse at center, #0a0a14 0%, #000 100%); }
+.mn-bg-stars::before { content: ''; position: absolute; width: 360px; height: 360px; top: 35%; left: 50%; transform: translate(-50%, -50%); background: radial-gradient(circle, rgba(90,122,106,0.18) 0%, transparent 70%); border-radius: 50%; }
+.mn-bg-stars::after { content: ''; position: absolute; inset: 0; background: radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.5), transparent), radial-gradient(1px 1px at 55% 15%, rgba(255,255,255,0.3), transparent), radial-gradient(1.5px 1.5px at 75% 55%, rgba(255,255,255,0.6), transparent); }
+.mn-content { position: relative; z-index: 2; }
+.mn-hero h1 { font-family: 'ZCOOL XiaoWei', serif; font-size: clamp(2rem, 5vw, 3.5rem); color: #f5efe0; margin: 0 0 14px; letter-spacing: 8px; }
+.mn-seal { width: 100px; height: 100px; margin: 0 auto 24px; border: 2px solid #5a7a6a; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; position: relative; }
+.mn-seal::after { content: ''; position: absolute; inset: -6px; border: 1px solid rgba(90,122,106,0.3); border-radius: 50%; }
+.mn-sub { color: #8a8278; font-size: 1.05rem; letter-spacing: 6px; margin-bottom: 28px; }
+.mn-section { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; }
+.mn-sec-title { font-family: 'ZCOOL XiaoWei', serif; font-size: 1.8rem; color: #f5efe0; text-align: center; letter-spacing: 6px; margin-bottom: 8px; }
+.mn-sec-sub { color: #8a8278; text-align: center; font-size: 0.9rem; letter-spacing: 4px; margin-bottom: 3rem; }
+.mn-footer { text-align: center; padding: 3rem 2rem; color: #6a6268; font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.04); }
+.mn-back { color: #8a8278; text-decoration: none; transition: color 0.3s; }
+.mn-back:hover { color: #d4a853; }
+@media (max-width: 768px) { .mn-hero { min-height: 50vh; } .mn-section { padding: 2rem 1rem; } }

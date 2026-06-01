@@ -1,0 +1,375 @@
+/* 作者页 — 统一暗色风格 */
+.aw-page {
+  background: linear-gradient(180deg, #0a0a0c 0%, #120f1a 100%);
+  min-height: 100vh;
+  color: #f5efe0;
+  position: relative;
+}
+
+/* 星空背景 */
+.aw-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.aw-star {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(201, 168, 76, 0.35);
+  animation: aw-twinkle 3s infinite alternate;
+}
+@keyframes aw-twinkle {
+  0% { opacity: 0.1; }
+  100% { opacity: 0.65; }
+}
+
+/* 导航 */
+.aw-nav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(10, 10, 12, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+}
+.aw-nav-back {
+  color: #8a8278;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+.aw-nav-back:hover { color: #c9a84c; }
+.aw-nav-brand {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 1.4rem;
+  color: #f5efe0;
+  letter-spacing: 4px;
+}
+
+/* Hero */
+.aw-hero {
+  position: relative;
+  z-index: 1;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(180deg, rgba(10, 10, 12, 0.3) 0%, rgba(18, 15, 26, 0.9) 100%),
+              radial-gradient(ellipse at center, rgba(201, 168, 76, 0.06) 0%, transparent 70%);
+}
+.aw-hero-content { position: relative; z-index: 2; }
+.aw-hero h1 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: #f5efe0;
+  letter-spacing: 8px;
+  margin-bottom: 12px;
+}
+.aw-sub { color: #8a8278; font-size: 1.05rem; letter-spacing: 6px; margin-bottom: 24px; }
+.aw-verse { color: #d4a853; font-style: italic; line-height: 2; font-size: 0.9rem; }
+.aw-verse p { margin: 4px 0; }
+
+.aw-seal {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 24px;
+  border: 2px solid #c9a84c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  position: relative;
+}
+.aw-seal::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 50%;
+}
+
+/* Section */
+.aw-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+.aw-sec-title {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 1.8rem;
+  color: #f5efe0;
+  text-align: center;
+  letter-spacing: 6px;
+  margin-bottom: 8px;
+}
+.aw-sec-sub {
+  color: #8a8278;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+  margin-bottom: 3rem;
+}
+
+/* 作者简介卡片 */
+.aw-intro-section { padding-top: 2rem; }
+.aw-bio-card {
+  background: linear-gradient(135deg, rgba(20, 18, 28, 0.95), rgba(10, 10, 12, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 3px solid #c9a84c;
+  border-radius: 8px;
+  padding: 2rem;
+  animation: awFadeIn 0.6s ease-out both;
+}
+.aw-bio-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.aw-bio-emoji { font-size: 2.5rem; }
+.aw-bio-header h2 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 1.5rem;
+  color: #f5efe0;
+  margin: 0;
+}
+.aw-real-name { font-size: 0.8rem; color: #8a8278; }
+.aw-bio-text {
+  font-size: 0.9rem;
+  color: #a09888;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.aw-meta-row {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.aw-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.aw-meta-label { font-size: 0.75rem; color: #6a6268; text-transform: uppercase; letter-spacing: 2px; }
+.aw-meta-value { font-size: 0.85rem; color: #d4a853; }
+
+/* 作品网格 */
+.aw-works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1.5rem;
+}
+
+/* 作品卡片 */
+.aw-work-card {
+  background: linear-gradient(135deg, rgba(20, 18, 28, 0.95), rgba(10, 10, 12, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  cursor: pointer;
+  animation: awFadeIn 0.6s ease-out both;
+}
+@keyframes awFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.aw-work-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(201, 168, 76, 0.15);
+  border-color: rgba(201, 168, 76, 0.2);
+  color: inherit;
+}
+.aw-work-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+.aw-work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.aw-work-title {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 1.2rem;
+  color: #f5efe0;
+}
+.aw-work-year {
+  font-size: 0.75rem;
+  color: #6a6268;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+.aw-work-desc {
+  font-size: 0.85rem;
+  color: #8a8278;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+.aw-work-hero-block {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  padding: 12px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.aw-work-hero-av {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(20, 18, 28, 0.9);
+  border: 2px solid #c9a84c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  color: #f5efe0;
+}
+.aw-work-hero-info h4 {
+  font-size: 1rem;
+  color: #f5efe0;
+  margin: 0 0 2px;
+}
+.aw-work-hero-title {
+  font-size: 0.75rem;
+  color: #d4a853;
+  display: block;
+  margin-bottom: 6px;
+}
+.aw-work-hero-info p {
+  font-size: 0.8rem;
+  color: #8a8278;
+  line-height: 1.6;
+  margin: 0;
+}
+.aw-work-heroines { margin-bottom: 12px; }
+.aw-work-heroines-label {
+  font-size: 0.7rem;
+  color: #6a6268;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+}
+.aw-work-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.aw-work-tag {
+  padding: 3px 8px;
+  background: rgba(212, 168, 83, 0.06);
+  border: 1px solid rgba(212, 168, 83, 0.12);
+  border-radius: 3px;
+  font-size: 0.7rem;
+  color: #a09888;
+}
+.aw-work-quote {
+  padding: 8px 12px;
+  background: rgba(212, 168, 83, 0.06);
+  border-left: 3px solid #c9a84c;
+  border-radius: 0 6px 6px 0;
+}
+.aw-work-quote p {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 0.8rem;
+  color: #c9a96e;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 时间线 */
+.aw-timeline {
+  position: relative;
+  padding-left: 40px;
+}
+.aw-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, #c9a84c, rgba(201, 168, 76, 0.2), transparent);
+}
+.aw-tl-item {
+  position: relative;
+  padding-bottom: 24px;
+  animation: awFadeIn 0.5s ease-out both;
+}
+.aw-tl-item::before {
+  content: '';
+  position: absolute;
+  left: -44px;
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  background: #c9a84c;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(201, 168, 76, 0.4);
+}
+.aw-tl-year {
+  font-size: 0.85rem;
+  color: #c9a84c;
+  margin-bottom: 4px;
+}
+.aw-tl-content h3 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 1.05rem;
+  color: #f5efe0;
+  margin-bottom: 4px;
+}
+.aw-tl-content p {
+  color: #8a8278;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Footer */
+.aw-footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #6a6268;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  position: relative;
+  z-index: 1;
+}
+.aw-footer-brand {
+  display: inline-block;
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  letter-spacing: 4px;
+}
+
+@media (max-width: 768px) {
+  .aw-works-grid { grid-template-columns: 1fr; }
+  .aw-hero { min-height: 40vh; }
+  .aw-section { padding: 2rem 1rem; }
+  .aw-nav { padding: 0.8rem 1rem; }
+}

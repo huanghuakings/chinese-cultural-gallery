@@ -1,0 +1,10 @@
+[
+  { "name": "水星", "cls": "mercury", "size": "5px", "orbit": "14vmin", "duration": 4, "color": "#b5b5b5", "startAngle": 0 },
+  { "name": "金星", "cls": "venus", "size": "8px", "orbit": "20vmin", "duration": 7, "color": "radial-gradient(circle, #f5d9a0, #e8a040)", "startAngle": 45 },
+  { "name": "地球", "cls": "earth", "size": "9px", "orbit": "27vmin", "duration": 12, "color": "radial-gradient(circle, #8ec8f0, #4488cc, #2266aa)", "startAngle": 90 },
+  { "name": "火星", "cls": "mars", "size": "6px", "orbit": "35vmin", "duration": 22, "color": "radial-gradient(circle, #f0a080, #cc4422)", "startAngle": 135 },
+  { "name": "木星", "cls": "jupiter", "size": "20px", "orbit": "48vmin", "duration": 45, "color": "radial-gradient(circle, #e8d0a0, #d4a060, #c08040, #a06030)", "startAngle": 180 },
+  { "name": "土星", "cls": "saturn", "size": "17px", "orbit": "62vmin", "duration": 80, "color": "radial-gradient(circle, #f0e0b0, #d4b070, #c09050)", "startAngle": 225, "hasRing": true },
+  { "name": "天王星", "cls": "uranus", "size": "12px", "orbit": "74vmin", "duration": 140, "color": "radial-gradient(circle, #c0e8f0, #80c0d0)", "startAngle": 270 },
+  { "name": "海王星", "cls": "neptune", "size": "11px", "orbit": "85vmin", "duration": 220, "color": "radial-gradient(circle, #80a0f0, #4060c0)", "startAngle": 315 }
+]

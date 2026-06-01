@@ -1,0 +1,39 @@
+/* 首页样式 */
+.home-hero {
+  position: relative; min-height: 100vh;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  text-align: center; padding: 80px 20px; overflow: hidden;
+  background: linear-gradient(135deg, #0a0a0c 0%, #1a1a2e 50%, #0a0a0c 100%);
+}
+.home-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 40%, rgba(212,168,83,0.06) 0%, transparent 60%);
+}
+.home-hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 55% 20%, rgba(255,255,255,0.25), transparent),
+    radial-gradient(1.5px 1.5px at 75% 55%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 30% 70%, rgba(255,255,255,0.2), transparent),
+    radial-gradient(1px 1px at 85% 35%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1px 1px at 10% 50%, rgba(255,255,255,0.4), transparent);
+}
+.home-hero-content { position: relative; z-index: 1; }
+.home-title {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: #f5efe0; margin-bottom: 16px;
+}
+.home-seal {
+  width: 140px; height: 140px; margin: 0 auto 24px;
+  border: 3px solid var(--gold, #c9a96e);
+  color: var(--red, #a03030);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 28px; letter-spacing: 8px;
+  position: relative;
+}

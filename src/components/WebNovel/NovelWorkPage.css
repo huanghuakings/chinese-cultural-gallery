@@ -1,0 +1,309 @@
+/* 作品子页 — 统一暗色风格 */
+.nw-page {
+  background: linear-gradient(180deg, #0a0a0c 0%, #120f1a 100%);
+  min-height: 100vh;
+  color: #f5efe0;
+}
+
+/* 导航 */
+.nw-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(10, 10, 12, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+}
+.nw-nav-back {
+  color: #8a8278;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+.nw-nav-back:hover { color: #c9a84c; }
+.nw-nav-brand {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 1.3rem;
+  color: #f5efe0;
+  letter-spacing: 4px;
+}
+
+/* Hero */
+.nw-hero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+  overflow: hidden;
+}
+.nw-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 55% 20%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1.5px 1.5px at 70% 60%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 35% 70%, rgba(255,255,255,0.2), transparent),
+    radial-gradient(1px 1px at 85% 40%, rgba(255,255,255,0.3), transparent);
+}
+.nw-hero-content { position: relative; z-index: 2; }
+.nw-hero h1 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: #f5efe0;
+  letter-spacing: 8px;
+  margin-bottom: 12px;
+}
+.nw-sub { color: #8a8278; font-size: 1.05rem; letter-spacing: 6px; margin-bottom: 24px; }
+.nw-verse { color: #d4a853; font-style: italic; line-height: 2; font-size: 0.9rem; }
+.nw-verse p { margin: 4px 0; }
+
+.nw-seal {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 24px;
+  border: 2px solid #c9a84c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  position: relative;
+}
+.nw-seal::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 50%;
+}
+
+/* Section */
+.nw-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+.nw-sec-title {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 1.8rem;
+  color: #f5efe0;
+  text-align: center;
+  letter-spacing: 6px;
+  margin-bottom: 8px;
+}
+.nw-sec-sub {
+  color: #8a8278;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+  margin-bottom: 3rem;
+}
+
+/* 作品简介 */
+.nw-intro-section { padding-top: 2rem; }
+.nw-desc-card {
+  background: linear-gradient(135deg, rgba(20, 18, 28, 0.95), rgba(10, 10, 12, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 3px solid #c9a84c;
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  animation: nwFadeIn 0.6s ease-out both;
+}
+.nw-desc-text {
+  font-size: 0.95rem;
+  color: #a09888;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* 主角卡片 */
+.nw-hero-card {
+  background: linear-gradient(135deg, rgba(20, 18, 28, 0.95), rgba(10, 10, 12, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 3px solid #c9a84c;
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  animation: nwFadeIn 0.6s ease-out both;
+}
+.nw-hero-av {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(20, 18, 28, 0.9);
+  border: 2px solid #c9a84c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+  color: #f5efe0;
+}
+.nw-hero-info h3 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 1.4rem;
+  color: #f5efe0;
+  margin: 0 0 4px;
+}
+.nw-hero-title {
+  font-size: 0.85rem;
+  color: #d4a853;
+  display: block;
+  margin-bottom: 10px;
+}
+.nw-hero-info p {
+  font-size: 0.9rem;
+  color: #a09888;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* 角色网格 */
+.nw-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* 角色卡片 */
+.nw-card {
+  background: linear-gradient(135deg, rgba(20, 18, 28, 0.95), rgba(10, 10, 12, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  animation: nwFadeIn 0.6s ease-out both;
+}
+@keyframes nwFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.nw-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(201, 168, 76, 0.12);
+  border-color: rgba(201, 168, 76, 0.15);
+}
+.nw-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.nw-emoji { font-size: 2rem; flex-shrink: 0; }
+.nw-header h3 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 1.2rem;
+  color: #f5efe0;
+  margin: 0 0 4px;
+}
+.nw-role {
+  font-size: 0.8rem;
+  color: #8a8278;
+  display: block;
+}
+.nw-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.nw-tag {
+  padding: 3px 8px;
+  background: rgba(212, 168, 83, 0.06);
+  border: 1px solid rgba(212, 168, 83, 0.12);
+  border-radius: 3px;
+  font-size: 0.7rem;
+  color: #a09888;
+}
+.nw-intro {
+  font-size: 0.9rem;
+  color: #a09888;
+  margin: 10px 0;
+  line-height: 1.6;
+  font-style: italic;
+}
+.nw-bio {
+  font-size: 0.85rem;
+  color: #8a8278;
+  line-height: 1.7;
+  margin: 10px 0;
+}
+.nw-quote {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 0.85rem;
+  color: #c9a96e;
+  padding: 8px 12px;
+  margin: 10px 0;
+  background: rgba(212, 168, 83, 0.06);
+  border-left: 3px solid #d4a853;
+  border-radius: 0 6px 6px 0;
+  line-height: 1.6;
+}
+.nw-detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-size: 0.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  margin-top: 8px;
+  padding-top: 8px;
+}
+.nw-label { color: #6a6268; flex-shrink: 0; }
+.nw-detail-item span:last-child { color: #a09888; text-align: right; max-width: 65%; }
+
+/* 女主角标签云（无详细数据时） */
+.nw-heroines-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.nw-heroine-badge {
+  padding: 8px 18px;
+  background: rgba(20, 18, 28, 0.8);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #a09888;
+  transition: all 0.3s;
+}
+.nw-heroine-badge:hover {
+  background: rgba(201, 168, 76, 0.1);
+  color: #d4a853;
+  border-color: rgba(201, 168, 76, 0.4);
+}
+
+/* Footer */
+.nw-footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #6a6268;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+.nw-footer-brand {
+  display: inline-block;
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  letter-spacing: 4px;
+}
+
+@media (max-width: 768px) {
+  .nw-grid { grid-template-columns: 1fr; }
+  .nw-hero { min-height: 40vh; }
+  .nw-section { padding: 2rem 1rem; }
+  .nw-hero-card { flex-direction: column; align-items: center; text-align: center; }
+  .nw-nav { padding: 0.8rem 1rem; }
+}

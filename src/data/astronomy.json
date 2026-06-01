@@ -1,0 +1,6 @@
+[
+  { "title": "太阳系", "desc": "八大行星运转动画，展示太阳系的轨道与大小比例", "route": "/solar-system", "emoji": "☀️", "color": "#6496ff" },
+  { "title": "3D 星空", "desc": "三维太阳系可视化，沉浸式浏览行星轨道", "route": "/solar-system-3d", "emoji": "🌐", "color": "#6496ff" },
+  { "title": "绕月轨道", "desc": "月球绕地轨道模拟，展示引力与轨道运动", "route": "/lunar-orbit", "emoji": "🌙", "color": "#6496ff" },
+  { "title": "阿波罗登月", "desc": "阿波罗计划登月模拟，重温人类登月历史", "route": "/moon-landing", "emoji": "🚀", "color": "#6496ff" }
+]

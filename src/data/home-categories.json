@@ -1,0 +1,96 @@
+[
+  {
+    "title": "天文动画",
+    "emoji": "🌌",
+    "color": "#6496ff",
+    "gradient": "rgba(100, 150, 255, 0.08)",
+    "border": "rgba(100, 150, 255, 0.2)",
+    "desc": "太阳系行星运转 · 三维星空 · 月球轨道 · 人类登月",
+    "cards": [
+      { "title": "太阳系", "desc": "八大行星运转动画", "route": "/solar-system", "emoji": "☀️" },
+      { "title": "3D 星空", "desc": "三维太阳系可视化", "route": "/solar-system-3d", "emoji": "🌐" },
+      { "title": "绕月轨道", "desc": "月球绕地轨道模拟", "route": "/lunar-orbit", "emoji": "🌙" },
+      { "title": "阿波罗登月", "desc": "人类登月历史模拟", "route": "/moon-landing", "emoji": "🚀" }
+    ]
+  },
+  {
+    "title": "历史人物",
+    "emoji": "📜",
+    "color": "#d4a853",
+    "gradient": "rgba(212, 168, 83, 0.08)",
+    "border": "rgba(212, 168, 83, 0.2)",
+    "desc": "唐宋八大家 · 千古诗韵 · 华夏巾帼 · 历代贤后 · 将相传奇 · 红楼群芳 · 西游女杰",
+    "cards": [
+      { "title": "历史长廊", "desc": "七大篇章 · 千年群英入口", "route": "/history", "emoji": "📜" },
+      { "title": "唐宋八大家", "desc": "韩柳欧王三苏曾巩", "route": "/tang-song", "emoji": "📖" },
+      { "title": "千古诗韵", "desc": "屈原李白杜甫苏轼李清照", "route": "/poets", "emoji": "🎵" },
+      { "title": "华夏巾帼", "desc": "不让须眉的华夏女杰", "route": "/heroines", "emoji": "⚔️" },
+      { "title": "华夏贤后", "desc": "历代皇后风云录", "route": "/empresses", "emoji": "👑" },
+      { "title": "将相传奇", "desc": "名将名臣 · 帝制风云", "route": "/generals", "emoji": "🏛️" },
+      { "title": "红楼群芳", "desc": "金陵十二钗 · 千红一哭", "route": "/honglou", "emoji": "🌸" },
+      { "title": "西游女杰", "desc": "观音 · 白骨精 · 万般情劫", "route": "/xiyouji", "emoji": "🐵" }
+    ]
+  },
+  {
+    "title": "网文宇宙",
+    "emoji": "🌌",
+    "color": "#c0392b",
+    "gradient": "rgba(192, 57, 43, 0.08)",
+    "border": "rgba(192, 57, 43, 0.2)",
+    "desc": "辰东 · 烽火戏诸侯 · 唐家三少 · 天蚕土豆 · 猫腻",
+    "cards": [
+      { "title": "辰东", "desc": "八部作品 · 诸天万界", "route": "/webnovel/author/chendong", "emoji": "🌌" },
+      { "title": "烽火戏诸侯", "desc": "雪中悍刀行 · 剑来", "route": "/webnovel/author/fenghuo", "emoji": "⚔️" },
+      { "title": "唐家三少", "desc": "斗罗大陆 · 武魂世界", "route": "/webnovel/author/tangsan", "emoji": "💎" },
+      { "title": "天蚕土豆", "desc": "斗破苍穹 · 武动乾坤", "route": "/webnovel/author/tancan", "emoji": "🔥" },
+      { "title": "猫腻", "desc": "庆余年 · 将夜 · 择天记", "route": "/webnovel/author/maoni", "emoji": "📖" }
+    ]
+  },
+  {
+    "title": "作家谱",
+    "emoji": "✒️",
+    "color": "#5a7a6a",
+    "gradient": "rgba(90, 122, 106, 0.08)",
+    "border": "rgba(90, 122, 106, 0.2)",
+    "desc": "鲁迅 · 茅盾 · 老舍 · 巴金 · 沈从文 · 钱钟书 · 张爱玲 · 辰东 · 猫腻 · 更多……",
+    "cards": [
+      { "title": "网文大神谱", "desc": "白金作家风格全览", "route": "/authors", "emoji": "📚" }
+    ]
+  },
+  {
+    "title": "影视星榜",
+    "emoji": "🎬",
+    "color": "#a03030",
+    "gradient": "rgba(160, 48, 48, 0.08)",
+    "border": "rgba(160, 48, 48, 0.2)",
+    "desc": "刘亦菲 · 赵丽颖 · 杨幂 · 白鹿 · 霸王别姬 · 卧虎藏龙 · 我不是药神 · 流浪地球",
+    "cards": [
+      { "title": "华娱星光榜", "desc": "影视女星 · 百花齐放", "route": "/actresses", "emoji": "🌟" }
+    ]
+  },
+  {
+    "title": "琴棋书画",
+    "emoji": "🎵",
+    "color": "#c9a84c",
+    "gradient": "rgba(201,168,76,0.08)",
+    "border": "rgba(201,168,76,0.2)",
+    "desc": "琴 · 棋 · 书 · 画 · 文人四艺",
+    "cards": [
+      { "title": "琴", "desc": "嵇康 · 伯牙 · 蔡邕 · 高山流水", "route": "/arts/qin", "emoji": "🎵" },
+      { "title": "棋", "desc": "黄龙士 · 范西屏 · 棋圣风范", "route": "/arts/qi", "emoji": "⚫" },
+      { "title": "书", "desc": "王羲之 · 颜真卿 · 柳公权 · 赵孟頫", "route": "/arts/shu", "emoji": "✒️" },
+      { "title": "画", "desc": "顾恺之 · 吴道子 · 齐白石 · 徐悲鸿", "route": "/arts/hua", "emoji": "🎨" }
+    ]
+  },
+  {
+    "title": "四大名著",
+    "emoji": "📚",
+    "color": "#8b5cf6",
+    "gradient": "rgba(139, 92, 246, 0.08)",
+    "border": "rgba(139, 92, 246, 0.2)",
+    "desc": "红楼梦 · 水浒传 · 三国演义 · 西游记",
+    "cards": [
+      { "title": "四大名著", "desc": "红楼水浒三国西游", "route": "/classics", "emoji": "📖" }
+    ]
+  }
+]

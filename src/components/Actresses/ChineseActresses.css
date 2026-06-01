@@ -1,0 +1,101 @@
+/* 影视星榜 — 统一暗色风格 */
+.ca-page {
+  background: linear-gradient(180deg, #0a0a0c 0%, #120f1a 100%);
+  min-height: 100vh;
+  color: #f5efe0;
+}
+
+/* Hero */
+.ca-hero {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
+  overflow: hidden;
+}
+.ca-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(160,48,48,0.12) 0%, transparent 70%);
+}
+.ca-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 55% 15%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1.5px 1.5px at 75% 55%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1px 1px at 30% 70%, rgba(255,255,255,0.25), transparent),
+    radial-gradient(1px 1px at 85% 35%, rgba(255,255,255,0.35), transparent),
+    radial-gradient(1px 1px at 10% 50%, rgba(255,255,255,0.4), transparent);
+}
+.ca-hero-content { position: relative; z-index: 2; }
+
+.ca-seal {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 24px;
+  border: 2px solid #a03030;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  position: relative;
+}
+.ca-seal::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border: 1px solid rgba(160,48,48,0.3);
+  border-radius: 50%;
+}
+
+.ca-hero h1 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: #f5efe0;
+  margin: 0 0 14px;
+  letter-spacing: 8px;
+}
+.ca-sub { color: #8a8278; font-size: 1.05rem; letter-spacing: 6px; margin-bottom: 28px; }
+.ca-verse p {
+  color: #a03030;
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 2;
+  margin: 4px 0;
+  opacity: 0.75;
+}
+
+/* Section */
+.ca-section { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; }
+.ca-sec-title {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 1.8rem;
+  color: #f5efe0;
+  text-align: center;
+  letter-spacing: 6px;
+  margin-bottom: 8px;
+}
+.ca-sec-sub { color: #8a8278; text-align: center; font-size: 0.9rem; letter-spacing: 4px; margin-bottom: 3rem; }
+
+/* Footer */
+.ca-footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #6a6268;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+@media (max-width: 768px) {
+  .ca-hero { min-height: 40vh; padding: 60px 15px; }
+  .ca-section { padding: 2rem 1rem; }
+}

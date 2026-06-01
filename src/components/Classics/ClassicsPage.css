@@ -1,0 +1,392 @@
+/* ============================================
+   名著详情页样式 — 统一全站暗色风格
+   ============================================ */
+
+.classics-page {
+  min-height: 100vh;
+  color: #f5efe0;
+  font-family: 'Noto Serif SC', 'STSong', serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* === Hero === */
+.classics-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+/* 星空背景 */
+.classics-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+  background: radial-gradient(ellipse at center, #0a0a14 0%, #000 100%);
+}
+
+.classics-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 55% 15%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1.5px 1.5px at 75% 55%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1px 1px at 30% 70%, rgba(255,255,255,0.25), transparent),
+    radial-gradient(1px 1px at 85% 35%, rgba(255,255,255,0.35), transparent),
+    radial-gradient(1px 1px at 10% 50%, rgba(255,255,255,0.4), transparent);
+}
+
+/* 顶部光晕 */
+.classics-hero-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.back-link {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  color: #8a8278;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  transition: color 0.3s;
+  z-index: 5;
+}
+.back-link:hover { color: #d4a853; }
+
+.classics-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+/* 印章 */
+.classics-seal {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  position: relative;
+}
+.classics-seal::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+}
+
+.classics-hero h1 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin: 0 0 14px;
+  letter-spacing: 8px;
+}
+
+.classics-meta {
+  font-size: 0.9rem;
+  color: #8a8278;
+  letter-spacing: 4px;
+  margin-bottom: 28px;
+}
+
+.classics-desc {
+  color: #a09888;
+  font-size: 1.05rem;
+  letter-spacing: 6px;
+  margin-bottom: 8px;
+}
+
+.classics-verse { margin-top: 8px; }
+.classics-verse p {
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 2;
+  margin: 4px 0;
+  opacity: 0.75;
+}
+
+/* === 正文区域 === */
+.classics-body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+/* === 分类过滤条 === */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 2rem 0 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(180deg, rgba(10,10,12,0.95) 0%, rgba(10,10,12,0.8) 80%, transparent 100%);
+  backdrop-filter: blur(8px);
+}
+
+.filter-btn {
+  padding: 8px 22px;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  color: #8a8278;
+  cursor: pointer;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  font-family: 'Noto Serif SC', serif;
+  backdrop-filter: blur(10px);
+}
+
+.filter-btn:hover {
+  background: rgba(212,168,83,0.08);
+  border-color: rgba(212,168,83,0.2);
+  color: #d4a853;
+}
+
+.filter-btn.active {
+  background: rgba(212,168,83,0.1);
+  border-color: rgba(212,168,83,0.25);
+  color: #d4a853;
+  box-shadow: 0 0 20px rgba(212,168,83,0.08);
+}
+
+/* === 卡片网格 === */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+/* === 角色卡片 === */
+.classic-card {
+  background: linear-gradient(135deg, rgba(20,18,28,0.95), rgba(10,10,12,0.98));
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-top: 3px solid transparent;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  animation: cardFadeIn 0.6s ease-out both;
+}
+
+.classic-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(192,57,43,0.15);
+  border-color: rgba(192,57,43,0.15);
+}
+
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.classic-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.classic-emoji {
+  font-size: 2rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.classic-header {
+  flex: 1;
+  min-width: 0;
+}
+
+.classic-header h3 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 1.2rem;
+  margin: 0 0 3px;
+  letter-spacing: 0.05em;
+}
+
+.classic-title {
+  font-size: 0.8rem;
+  color: #8a8278;
+  display: block;
+}
+
+.classic-nickname {
+  font-size: 0.75rem;
+  color: #6a6268;
+  display: block;
+  margin-top: 1px;
+}
+
+/* 水浒专属 */
+.classic-rank {
+  font-size: 0.75rem;
+  color: #d4a853;
+  font-weight: 600;
+  background: rgba(212,168,83,0.08);
+  padding: 2px 8px;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+.classic-star {
+  font-size: 0.7rem;
+  color: #8a8278;
+  opacity: 0.7;
+  display: block;
+  margin-top: 2px;
+}
+
+/* 标题线 */
+.classic-title-line {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 0.95rem;
+  color: #d4a853;
+  margin: 8px 0;
+  padding-left: 12px;
+  border-left: 2px solid rgba(212,168,83,0.35);
+}
+
+/* 标签 */
+.classic-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.classic-tag {
+  padding: 2px 9px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  background: rgba(212,168,83,0.06);
+  border: 1px solid rgba(212,168,83,0.1);
+  color: #a09888;
+}
+
+/* 正文 */
+.classic-bio {
+  font-size: 0.85rem;
+  color: #8a8278;
+  line-height: 1.75;
+  margin-bottom: 8px;
+}
+
+.classic-hint {
+  font-size: 0.7rem;
+  color: #6a6268;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  margin-top: 8px;
+}
+
+.classic-card:hover .classic-hint {
+  opacity: 1;
+}
+
+/* === 展开详情 === */
+.classic-expanded {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  animation: expandIn 0.3s ease;
+}
+
+@keyframes expandIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.classic-quote {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 0.9rem;
+  color: #c9a96e;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  background: rgba(212,168,83,0.06);
+  border-left: 3px solid #d4a853;
+  border-radius: 0 6px 6px 0;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.classic-verdict {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 0.9rem;
+  color: #d4a853;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  background: rgba(212,168,83,0.04);
+  border-left: 2px solid rgba(212,168,83,0.3);
+  border-radius: 0 6px 6px 0;
+  line-height: 1.6;
+}
+
+.classic-fate,
+.classic-works {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  font-size: 0.8rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.fate-label {
+  color: #6a6268;
+  flex-shrink: 0;
+}
+
+.fate-text {
+  color: #a09888;
+  text-align: right;
+  max-width: 65%;
+  line-height: 1.5;
+}
+
+/* === Footer === */
+.classics-footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #6a6268;
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+/* === 响应式 === */
+@media (max-width: 768px) {
+  .classics-hero { min-height: 60vh; padding: 60px 15px; }
+  .classics-hero h1 { font-size: 1.8rem; letter-spacing: 6px; }
+  .classics-body { padding: 0 1rem 3rem; }
+  .cards-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .filter-bar { gap: 6px; padding: 1.5rem 0 1rem; }
+  .filter-btn { padding: 6px 14px; font-size: 0.8rem; }
+}

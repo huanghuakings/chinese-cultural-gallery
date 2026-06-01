@@ -1,0 +1,210 @@
+/* === 共享内容页样式 (以雪中悍刀行为基准) === */
+/* 使用前在页面 CSS 中定义 --cp-accent 和 --cp-accent-rgb */
+
+.cp-page {
+  background: linear-gradient(180deg, #0a0a0c 0%, #120f1a 100%);
+  min-height: 100vh;
+  color: #f5efe0;
+}
+
+/* Hero */
+.cp-hero {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(10,10,12,0.3) 0%, rgba(18,15,26,0.9) 100%),
+              radial-gradient(ellipse at center, var(--cp-accent-glow, rgba(160,48,48,0.12)) 0%, transparent 70%);
+}
+
+.cp-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 55% 20%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1.5px 1.5px at 70% 60%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 35% 70%, rgba(255,255,255,0.2), transparent),
+    radial-gradient(1px 1px at 85% 40%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1px 1px at 10% 50%, rgba(255,255,255,0.4), transparent);
+}
+
+.cp-hero-content { position: relative; z-index: 2; }
+
+.cp-hero h1 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: #f5efe0;
+  margin: 0 0 12px;
+  letter-spacing: 8px;
+}
+
+.cp-sub {
+  color: #8a8278;
+  font-size: 1.05rem;
+  letter-spacing: 6px;
+  margin-bottom: 24px;
+}
+
+.cp-verse {
+  color: #d4a853;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.cp-verse p { margin: 4px 0; }
+
+/* Seal */
+.cp-seal {
+  width: 100px; height: 100px;
+  margin: 0 auto 24px;
+  border: 2px solid var(--cp-accent, #a03030);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 22px; color: var(--cp-accent, #a03030);
+  letter-spacing: 4px;
+  position: relative;
+}
+
+.cp-seal::after {
+  content: ''; position: absolute;
+  inset: -6px;
+  border: 1px solid var(--cp-accent-dim, rgba(160,48,48,0.3));
+  border-radius: 50%;
+}
+
+/* Section */
+.cp-section {
+  max-width: 1200px; margin: 0 auto; padding: 3rem 2rem;
+}
+
+.cp-sec-title {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 1.8rem; color: #f5efe0;
+  text-align: center; letter-spacing: 6px; margin-bottom: 8px;
+}
+
+.cp-sec-sub {
+  color: #8a8278; text-align: center;
+  font-size: 0.9rem; letter-spacing: 4px; margin-bottom: 3rem;
+}
+
+/* Card grid */
+.cp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.cp-card {
+  background: linear-gradient(135deg, rgba(20,18,28,0.95), rgba(10,10,12,0.98));
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  animation: cpFadeIn 0.6s ease-out both;
+}
+
+@keyframes cpFadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+.cp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px var(--cp-shadow, rgba(160,48,48,0.2));
+  border-color: var(--cp-border-hover, rgba(160,48,48,0.2));
+}
+
+/* Card internals */
+.cp-card-top {
+  display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;
+}
+
+.cp-emoji { font-size: 2rem; flex-shrink: 0; }
+
+.cp-header h3 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 1.25rem; color: #f5efe0; margin: 0 0 4px;
+}
+
+.cp-role { font-size: 0.8rem; color: #8a8278; }
+
+.cp-title {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 1rem; color: #d4a853;
+  margin: 8px 0; padding-left: 12px;
+  border-left: 2px solid rgba(212,168,83,0.4);
+}
+
+.cp-intro {
+  font-size: 0.9rem; color: #a09888;
+  margin: 10px 0; line-height: 1.6; font-style: italic;
+}
+
+.cp-bio {
+  font-size: 0.85rem; color: #8a8278;
+  line-height: 1.7; margin: 10px 0;
+}
+
+.cp-quote {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 0.9rem; color: #c9a96e;
+  padding: 10px 14px; margin: 12px 0;
+  background: rgba(212,168,83,0.06);
+  border-left: 3px solid #d4a853;
+  border-radius: 0 6px 6px 0;
+  line-height: 1.6;
+}
+
+.cp-details {
+  margin-top: 12px; padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.cp-detail-item {
+  display: flex; justify-content: space-between;
+  padding: 4px 0; font-size: 0.8rem;
+}
+
+.cp-label { color: #6a6268; }
+
+.cp-detail-item span:last-child {
+  color: #a09888; text-align: right; max-width: 65%;
+}
+
+/* Footer */
+.cp-footer {
+  text-align: center; padding: 3rem 2rem;
+  color: #6a6268; font-size: 0.85rem;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+.cp-footer-brand {
+  display: inline-block;
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 1.5rem; color: var(--cp-accent, #a03030);
+  margin-bottom: 12px; letter-spacing: 4px;
+}
+
+/* Tag chips */
+.cp-tags {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px;
+}
+
+.cp-tag {
+  padding: 3px 10px;
+  background: rgba(212,168,83,0.06);
+  border: 1px solid rgba(212,168,83,0.12);
+  border-radius: 3px;
+  font-size: 0.75rem; color: #a09888;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cp-grid { grid-template-columns: 1fr; }
+  .cp-hero { min-height: 40vh; }
+  .cp-section { padding: 2rem 1rem; }
+}

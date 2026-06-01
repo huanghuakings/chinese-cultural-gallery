@@ -1,0 +1,180 @@
+.solar-page {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.solar-system {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vmin;
+  height: 100vmin;
+  z-index: 1;
+}
+
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6vmin;
+  height: 6vmin;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff7a0, #ffcc00, #ff8800, #ff4400);
+  box-shadow:
+    0 0 60px 20px rgba(255, 200, 0, 0.6),
+    0 0 120px 60px rgba(255, 150, 0, 0.3),
+    0 0 200px 100px rgba(255, 100, 0, 0.15);
+  animation: sunPulse 4s ease-in-out infinite;
+  z-index: 10;
+}
+
+@keyframes sunPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 60px 20px rgba(255, 200, 0, 0.6),
+      0 0 120px 60px rgba(255, 150, 0, 0.3),
+      0 0 200px 100px rgba(255, 100, 0, 0.15);
+  }
+  50% {
+    box-shadow:
+      0 0 80px 30px rgba(255, 200, 0, 0.8),
+      0 0 160px 80px rgba(255, 150, 0, 0.4),
+      0 0 260px 130px rgba(255, 100, 0, 0.2);
+  }
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.planet-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.planet {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.moon-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  animation: moonSpin 2s linear infinite;
+}
+
+.moon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  margin-left: -3px;
+  background: radial-gradient(circle, #eee, #aaa);
+  border-radius: 50%;
+}
+
+@keyframes moonSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.saturn-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 180%;
+  height: 180%;
+  transform: translate(-50%, -50%) rotateX(75deg);
+  border: 2px solid rgba(210, 180, 140, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@keyframes spin-mercury { from { transform: translate(-50%,-50%) rotate(0deg); } to { transform: translate(-50%,-50%) rotate(360deg); } }
+@keyframes spin-venus   { from { transform: translate(-50%,-50%) rotate(45deg); } to { transform: translate(-50%,-50%) rotate(405deg); } }
+@keyframes spin-earth   { from { transform: translate(-50%,-50%) rotate(90deg); } to { transform: translate(-50%,-50%) rotate(450deg); } }
+@keyframes spin-mars    { from { transform: translate(-50%,-50%) rotate(135deg); } to { transform: translate(-50%,-50%) rotate(495deg); } }
+@keyframes spin-jupiter { from { transform: translate(-50%,-50%) rotate(180deg); } to { transform: translate(-50%,-50%) rotate(540deg); } }
+@keyframes spin-saturn  { from { transform: translate(-50%,-50%) rotate(225deg); } to { transform: translate(-50%,-50%) rotate(585deg); } }
+@keyframes spin-uranus  { from { transform: translate(-50%,-50%) rotate(270deg); } to { transform: translate(-50%,-50%) rotate(630deg); } }
+@keyframes spin-neptune { from { transform: translate(-50%,-50%) rotate(315deg); } to { transform: translate(-50%,-50%) rotate(675deg); } }
+
+.paused .planet-orbit,
+.paused .moon-orbit,
+.paused .sun {
+  animation-play-state: paused !important;
+}
+
+.controls {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.controls button {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+}
+
+.controls button:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.4);
+}
+
+.speed-label {
+  color: rgba(255,255,255,0.6);
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.shooting-star {
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 6px 2px rgba(255,255,255,0.8);
+  z-index: 0;
+  animation: shoot linear forwards;
+}
+
+@keyframes shoot {
+  0%   { opacity: 1; transform: translate(0, 0) scale(1); }
+  100% { opacity: 0; transform: translate(-300px, 300px) scale(0.2); }
+}

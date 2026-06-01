@@ -1,0 +1,10 @@
+[
+  { "to": "/", "label": "首页" },
+  { "to": "/astronomy", "label": "天文动画" },
+  { "to": "/history", "label": "历史人物" },
+  { "to": "/webnovel", "label": "网文宇宙" },
+  { "to": "/classics", "label": "四大名著" },
+  { "to": "/arts", "label": "琴棋书画" },
+  { "to": "/authors", "label": "作家谱" },
+  { "to": "/actresses", "label": "影视星榜" }
+]

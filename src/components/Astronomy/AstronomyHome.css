@@ -1,0 +1,104 @@
+/* 天文动画 Hub */
+.ah-page {
+  background: linear-gradient(180deg, #0a0a0c 0%, #0d0d1a 100%);
+  min-height: 100vh;
+  color: #f5efe0;
+}
+
+.ah-hero {
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+  background: radial-gradient(ellipse at center, rgba(100,150,255,0.08) 0%, transparent 70%);
+}
+
+.ah-seal {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  border: 2px solid #6496ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 22px;
+  color: #6496ff;
+  letter-spacing: 4px;
+}
+
+.ah-hero h1 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #f5efe0;
+  letter-spacing: 8px;
+  margin: 0 0 8px;
+}
+
+.ah-sub {
+  color: #6b75a0;
+  font-size: 1rem;
+  letter-spacing: 4px;
+}
+
+.ah-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.ah-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.ah-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: linear-gradient(135deg, rgba(20,22,35,0.9), rgba(10,12,18,0.95));
+  border: 1px solid rgba(100,150,255,0.15);
+  border-top: 3px solid #6496ff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeIn 0.6s ease-out both;
+}
+
+.ah-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(100,150,255,0.2);
+  border-color: rgba(100,150,255,0.3);
+}
+
+.ah-card-top {
+  margin-bottom: 10px;
+}
+
+.ah-emoji {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.ah-card h3 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 1.15rem;
+  color: #f5efe0;
+  margin: 0;
+}
+
+.ah-desc {
+  color: #7a8090;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ah-footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #5a6070;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(100,150,255,0.1);
+}

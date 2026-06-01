@@ -1,0 +1,75 @@
+[
+  {
+    "title": "辰东",
+    "desc": "本名杨振东，起点白金作家，开创'东流'风格",
+    "route": "/webnovel/author/chendong",
+    "emoji": "🌌",
+    "color": "#c9a84c",
+    "works": [
+      { "label": "完美世界", "route": "/webnovel/author/chendong/perfect-world" },
+      { "label": "圣墟", "route": "/webnovel/author/chendong/shengxu" },
+      { "label": "遮天", "route": "/webnovel/author/chendong/zhetian" },
+      { "label": "神墓", "route": "/webnovel/author/chendong/shenmu" },
+      { "label": "长生界", "route": "/webnovel/author/chendong/changsheng" },
+      { "label": "不死不灭", "route": "/webnovel/author/chendong/buxie" },
+      { "label": "深空彼岸", "route": "/webnovel/author/chendong/shenkong" },
+      { "label": "夜无疆", "route": "/webnovel/author/chendong/yewujiang" }
+    ]
+  },
+  {
+    "title": "烽火戏诸侯",
+    "desc": "文笔优美，'天不生我李淳罡，剑道万古如长夜'",
+    "route": "/webnovel/author/fenghuo",
+    "emoji": "⚔️",
+    "color": "#a03030",
+    "works": [
+      { "label": "雪中悍刀行", "route": "/webnovel/author/fenghuo/xuezhong" },
+      { "label": "剑来", "route": "/webnovel/author/fenghuo/jianlai" }
+    ]
+  },
+  {
+    "title": "唐家三少",
+    "desc": "起点白金作家，中国网络文学IP化第一人",
+    "route": "/webnovel/author/tangsan",
+    "emoji": "💎",
+    "color": "#6b8db5",
+    "works": [
+      { "label": "斗罗大陆", "route": "/webnovel/author/tangsan/douluo" }
+    ]
+  },
+  {
+    "title": "天蚕土豆",
+    "desc": "起点白金作家，'三十年河东，三十年河西，莫欺少年穷'",
+    "route": "/webnovel/author/tancan",
+    "emoji": "🔥",
+    "color": "#d43c2a",
+    "works": [
+      { "label": "斗破苍穹", "route": "/webnovel/author/tancan/doupocangqiong" },
+      { "label": "武动乾坤", "route": "/webnovel/author/tancan/wudong" }
+    ]
+  },
+  {
+    "title": "猫腻",
+    "desc": "网络文学'文学性'流派代表人物，深沉厚重",
+    "route": "/webnovel/author/maoni",
+    "emoji": "📖",
+    "color": "#5a7a6a",
+    "works": [
+      { "label": "庆余年", "route": "/webnovel/author/maoni/qingyunian" },
+      { "label": "将夜", "route": "/webnovel/author/maoni/jiangye" },
+      { "label": "择天记", "route": "/webnovel/author/maoni/zhaotianji" }
+    ]
+  },
+  {
+    "title": "更多作家",
+    "desc": "爱潜水的乌贼、蝴蝶蓝、忘语、耳根……",
+    "route": "/webnovel/more",
+    "emoji": "📚",
+    "color": "#8a6d8a",
+    "works": [
+      { "label": "诡秘之主" },
+      { "label": "全职高手" },
+      { "label": "凡人修仙传" }
+    ]
+  }
+]

@@ -1,0 +1,182 @@
+/* ============================================
+   公共卡片组件样式 — 全站统一
+   使用方式：
+     import { Card, CardGrid } from '@/components/ui/Card'
+     或在页面中引入 './Card.css' 后使用对应类名
+   ============================================ */
+
+/* === 卡片网格 === */
+.cp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+@media (max-width: 768px) {
+  .cp-grid { grid-template-columns: 1fr; }
+}
+
+/* === 卡片本体 === */
+.cp-card {
+  background: linear-gradient(135deg, rgba(20,18,28,0.95), rgba(10,10,12,0.98));
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  position: relative;
+  overflow: hidden;
+  animation: cpFadeIn 0.6s ease-out both;
+  cursor: pointer;
+}
+/* Link 卡片 */
+a.cp-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+a.cp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(90,122,106,0.15);
+  border-color: rgba(212,168,83,0.2);
+  color: inherit;
+}
+a.cp-card:visited,
+a.cp-card:active { color: inherit; text-decoration: none; }
+@keyframes cpFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* === 卡片顶部 === */
+.cp-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.cp-emoji { font-size: 2rem; flex-shrink: 0; line-height: 1; }
+.cp-header { flex: 1; min-width: 0; }
+.cp-header h3 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 1.25rem;
+  color: #f5efe0;
+  margin: 0 0 4px;
+  letter-spacing: 0.05em;
+}
+.cp-role, .cp-dynasty, .cp-nickname, .cp-faction {
+  font-size: 0.8rem;
+  color: #8a8278;
+  display: block;
+}
+
+/* === 标题线（篆书左边框） === */
+.cp-title {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 1rem;
+  color: #d4a853;
+  margin: 8px 0;
+  padding-left: 12px;
+  border-left: 2px solid rgba(212,168,83,0.4);
+}
+
+/* === 标签 === */
+.cp-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
+.cp-tag {
+  padding: 3px 10px;
+  background: rgba(212,168,83,0.06);
+  border: 1px solid rgba(212,168,83,0.12);
+  border-radius: 3px;
+  font-size: 0.75rem;
+  color: #a09888;
+}
+
+/* === 文本 === */
+.cp-intro {
+  font-size: 0.9rem; color: #a09888;
+  margin: 10px 0; line-height: 1.6; font-style: italic;
+}
+.cp-bio {
+  font-size: 0.85rem; color: #8a8278;
+  line-height: 1.7; margin: 10px 0;
+}
+
+/* === 引用块 === */
+.cp-quote {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 0.9rem; color: #c9a96e;
+  padding: 10px 14px; margin: 12px 0;
+  background: rgba(212,168,83,0.06);
+  border-left: 3px solid #d4a853;
+  border-radius: 0 6px 6px 0;
+  line-height: 1.6;
+}
+
+/* === 详情区 === */
+.cp-details {
+  margin-top: 12px; padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.cp-detail-item {
+  display: flex; justify-content: space-between;
+  padding: 4px 0; font-size: 0.8rem;
+}
+.cp-label { color: #6a6268; flex-shrink: 0; }
+.cp-detail-item span:last-child {
+  color: #a09888; text-align: right; max-width: 65%;
+}
+
+/* === 展开详情 === */
+.cp-expanded {
+  margin-top: 12px; padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  animation: cpExpandIn 0.3s ease;
+}
+@keyframes cpExpandIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* === 提示 === */
+.cp-hint {
+  font-size: 0.7rem; color: #6a6268; text-align: center;
+  opacity: 0; transition: opacity 0.3s; margin-top: 8px;
+}
+.cp-card:hover .cp-hint { opacity: 1; }
+
+/* === 特殊字段 === */
+.cp-gem { font-size: 0.8rem; color: #8a8278; margin: 6px 0; }
+.cp-rank {
+  font-size: 0.75rem; color: #d4a853; font-weight: 600;
+  background: rgba(212,168,83,0.08); padding: 2px 8px; border-radius: 4px;
+  align-self: flex-start;
+}
+.cp-star { font-size: 0.7rem; color: #8a8278; opacity: 0.7; display: block; margin-top: 2px; }
+
+/* === 入口卡片 (Tile) === */
+.cp-tile {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 8px;
+  padding: 1.2rem 1rem;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  animation: cpFadeIn 0.6s ease-out both;
+  cursor: pointer;
+}
+.cp-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(192,57,43,0.12);
+  border-color: rgba(212,168,83,0.15);
+}
+.cp-tile-emoji { font-size: 1.3rem; display: block; margin-bottom: 6px; }
+.cp-tile h3 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 1rem;
+  margin: 0;
+}
+.cp-tile p {
+  color: #7a7278;
+  font-size: 0.78rem;
+  margin: 4px 0 0;
+  line-height: 1.5;
+}
